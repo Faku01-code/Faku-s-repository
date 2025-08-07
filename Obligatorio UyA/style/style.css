@@ -1,0 +1,94 @@
+body{
+    background-image: url(../img/A1QkxwfdkQL.png);
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-size:cover;    
+    background-position: center;
+}
+
+
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    width: max-content;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+    margin-top: 25%;
+    margin-left: -50%;
+}
+
+/* .sidebar:hover .sidebar_element{
+    grid-template-columns: 40px 1fr;
+} */
+
+.sidebar_list {
+    list-style: none;
+    padding: 0;
+
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.sidebar_element{
+    padding: .8rem 1.3rem;
+    border-radius: 3px;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 1fr;
+
+    color: #526581;
+    fill: #8491a5;
+
+    transition-duration: .4s;
+}
+.sidebar_element:not(.sidebar_element--logo):hover{
+    background-color: #007AFF;
+    color: #fff;
+    fill: #fff;
+    cursor: pointer;
+}
+
+.sidebar_icon--logo{
+    max-width: 30px;
+}
+
+.sidebar_hide {
+    overflow: hidden;
+}
+
+.sidebar_element p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    font-size: larger;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+  a {
+    text-decoration: none;
+    color: black;
+
+}
+
+  a:visited {
+    color: black;
+  }
+
+#Inicio {
+    margin-top: 4.2%;
+    width: 83%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#img-bienvenida {
+    margin-left: 5%;
+}
+
+li {
+    list-style-type: none;
+}
