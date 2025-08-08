@@ -1,8 +1,8 @@
-body{
+body {
     background-image: url(../img/A1QkxwfdkQL.png);
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-size:cover;    
+    background-size: cover;
     background-position: center;
 }
 
@@ -30,7 +30,7 @@ body{
     gap: .4rem;
 }
 
-.sidebar_element{
+.sidebar_element {
     padding: .8rem 1.3rem;
     border-radius: 3px;
 
@@ -43,14 +43,15 @@ body{
 
     transition-duration: .4s;
 }
-.sidebar_element:not(.sidebar_element--logo):hover{
+
+.sidebar_element:not(.sidebar_element--logo):hover {
     background-color: #007AFF;
     color: #fff;
     fill: #fff;
     cursor: pointer;
 }
 
-.sidebar_icon--logo{
+.sidebar_icon--logo {
     max-width: 30px;
 }
 
@@ -68,27 +69,47 @@ body{
     text-decoration: none;
 }
 
-  a {
+a {
     text-decoration: none;
     color: black;
 
 }
 
-  a:visited {
+a:visited {
     color: black;
-  }
+}
 
 #Inicio {
-    margin-top: 4.2%;
+    margin-top: 3.8%;
     width: 83%;
     background-color: white;
     border-radius: 10px;
 }
 
+.PresImg {
+    margin-top: 12%;
+    margin-right: 3%;
+}
+
 #img-bienvenida {
-    margin-left: 5%;
+    margin-left: 23%;
+    border-radius: 5px;
 }
 
 li {
     list-style-type: none;
+}
+
+#vid-bienvenida {
+    border-radius: 5px;
+
+}
+
+#texto {
+    margin-left: 13%;
+}
+
+#cards {
+    margin-top: 10px;
+    margin-left: 3.5%;
 }
