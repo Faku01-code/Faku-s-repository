@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ainground - Comunidad Gamer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-dark: #1a2131;
+            --primary: #353f5c;
+            --accent: #6c5ce7;
+            --light: #f8f9fa;
+            --text: #e2e2e2;
+        }
+
+        p,
+        .card-title {
+            color: white;
+        }
+
+        body {
+            background-color: var(--primary-dark);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: var(--primary-dark) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--light) !important;
+        }
+
+        .nav-link {
+            color: var(--text) !important;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(26, 33, 49, 0.9), rgba(26, 33, 49, 0.9)),
+                url('https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            border: none;
+            border-radius: 30px;
+            padding: 10px 25px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #5649c5;
+            transform: translateY(-2px);
+        }
+
+        .game-character {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(108, 92, 231, 0.5));
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: var(--primary-dark);
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .game-character {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./logo.png" alt="Ainground Logo" width="30" height="30"
+                    class="d-inline-block align-text-top me-2">
+                Ainground
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./conper.html">Consolas y Perifericos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./com.html">Comunidad</a>
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">Bienvenido a Ainground</h1>
+                    <p class="lead mb-5">La comunidad gamer donde encontrarás amigos, los últimos lanzamientos y
+                        noticias del mundo de los videojuegos.</p>
+                    <a href="#about" class="btn btn-primary btn-lg">Descubre más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" style="background-color: var(--primary);">
+        <div class="container">
+            <h2 class="section-title text-center">Sobre Nosotros</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="text-center text-lg-start">En Ainground, creemos que los videojuegos son mucho más que
+                        solo un pasatiempo: son una forma de conectar, compartir y vivir aventuras juntos. Nuestro
+                        objetivo es crear una comunidad vibrante donde gamers de todos los niveles puedan encontrar
+                        amigos, aprender nuevos trucos y disfrutar de contenido exclusivo.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="./kirito.png" alt="Personaje de juego" class="game-character img-fluid" width="80%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Próximos Lanzamientos</h2>
+            <div class="row">
+                <!-- EA FC 26 Card -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://drop-assets.ea.com/images/20bYTiyLR8hjpst7WOruQi/c8d8a7ebe79bdb7dde9defb0147a11d7/FC26_Rev_Neuer_Gameplay_16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5;Resize=(1280)&q=85"
+                            class="card-img-top" alt="EA Sports FC 26">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">EA Sports FC 26</h5>
+                            <p class="card-text flex-grow-1">Suscríbete hoy mismo para recibir los últimos productos,
+                                eventos, noticias y promociones de EA SPORTS FC™ 26 y EA por correo electrónico.</p>
+                            <a href="https://www.ea.com/es/games/ea-sports-fc/fc-26"
+                                class="btn btn-primary mt-auto">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GTA 6 Card -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://i.redd.it/y1mic3i5yh4c1.png" class="card-img-top" alt="ilustracion GTA 6">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">GTA 6</h5>
+                            <p class="card-text flex-grow-1">Jason y Lucia siempre han sabido que las cartas estaban en
+                                su contra, pero cuando un golpe que parecía fácil sale mal, se ven atrapados en el lado
+                                más oscuro del lugar más soleado de América.</p>
+                            <a href="https://www.rockstargames.com/VI" class="btn btn-primary mt-auto">Saber Más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Game 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            class="card-img-top" alt="Nuevo Juego">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Próximamente</h5>
+                            <p class="card-text flex-grow-1">Mantente atento a nuestros anuncios para descubrir los
+                                próximos lanzamientos que revolucionarán la industria de los videojuegos.</p>
+                            <a href="#" class="btn btn-primary mt-auto">Notificarme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5" style="background-color: var(--primary);">
+        <div class="container">
+            <h2 class="section-title text-center">¿Por qué unirte a Ainground?</h2>
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Comunidad Activa</h4>
+                    <p>Conecta con gamers de todo el mundo y forma parte de una comunidad vibrante y diversa.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h4>Noticias Actualizadas</h4>
+                    <p>Mantente informado con las últimas noticias, reviews y actualizaciones del mundo gaming.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h4>Eventos Exclusivos</h4>
+                    <p>Participa en torneos, giveaways y eventos exclusivos para miembros de nuestra comunidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0 text-center text-lg-start">
+                    <h5>Ainground</h5>
+                    <p>La mejor comunidad gamer para conectar, compartir y disfrutar de los videojuegos.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0 text-center">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-light">Inicio</a></li>
+                        <li><a href="#" class="text-decoration-none text-light">Juegos</a></li>
+                        <li><a href="#" class="text-decoration-none text-light">Noticias</a></li>
+                        <li><a href="#" class="text-decoration-none text-light">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <h5>Síguenos</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Ainground. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
