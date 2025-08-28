@@ -22,13 +22,23 @@
             line-height: 1.6;
         }
         
-        .navbar {
-            background-color: var(--primary) !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+         .navbar {
+            background-color: var(--primary-dark) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
-        
-        .navbar-brand, .nav-link {
+
+        .navbar-brand {
+            font-weight: bold;
+            color: var(--light) !important;
+        }
+
+        .nav-link {
             color: var(--text) !important;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
         }
         
         .hero-section {
@@ -148,11 +158,9 @@
         }
         
         footer {
-            background: var(--primary-dark);
-            color: var(--text);
+            background-color: var(--primary-dark);
             padding: 40px 0 20px;
-            margin-top: 60px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
         }
         
         .rating {
